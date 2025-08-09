@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <title>Contact - Nobile Caffè, La culture du café - Coltivazione del caffè</title>  
+  <link rel=" stylesheet " href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/tbe3izj.css">
+  <link rel="icon" href="Links/nobile_icone.ico" type="image/x-icon">
+        <head>
+            <meta charset="utf-8">
+            <title></title>
+        </head>
+        <body>
+          <div class="background-container">
+            <img src="Links/illu_motifs_Plan de travail 1.png" class="bg1">
+            <img src="Links/marbre noir-vert.png" class="bg2">
+          </div>
+
+          <div class="contact_bloc">
+            <p>contact@nobilecaffe.it</p>
+            <p>Piazza del Barbacan, </br>
+                34121 Trieste TS, Italie</br>
+                T. +390406754350</p>
+            <p><a href="#"><img src="Links/facebook_logo_cyan.svg" alt="Facebook"></a> nobile.caffe.it</p>
+            <p><a href="#"><img src="Links/instagram_logo_cyan.svg" alt="Instagram"></a> nobile.caffe.it</p>
+            <p><a href="#"><img src="Links/linkedin_logo_cyan.svg" alt="LinkdIn"></a> nobile.caffe.it</p>
+          </div>
+          <img src="Links/boussole.png" alt="Formulaire" class="boussole-img" onclick="openModal()">
+
+          <div id="contact-modal" class="contact-modal">
+            <div class="contact-modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2>Formulaire de contact</h2>
+              <form>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <footer class="footer">
+              <div class="footer-container">
+                <nav class="footer-menu">
+                  <a href="index.html"><img src="Links/LOGO_PICTO - blanc fond noir.png" alt="Logo" class="footer-logo"></a>
+                  <a href="connaitre.html">Connaître Nobile</a>
+                  <a href="nos-produits.html">Nos produits</a>
+                  <a href="contact.html">Contact</a>
+                </nav>
+
+                <div class="social-menu">
+                  <a href="#"><img src="Links/mail.svg" alt="Mail"></a>
+                  <a href="#"><img src="Links/facebook_logo_blanc.svg" alt="Facebook"></a>
+                  <a href="#"><img src="Links/instagram_logo_blanc.svg" alt="Instagram"></a>
+                  <a href="#"><img src="Links/linkedin_logo_blanc.svg" alt="LinkdIn"></a>
+                </div>
+              </div>
+            </footer> 
+          </div>
+          <script>
+          function ajusterContactBloc() {
+              const bloc = document.querySelector('.contact_bloc');
+              const ratio =4/5 ;
+              bloc.style.width = (bloc.offsetHeight * ratio) + 'px';
+          }
+
+          window.addEventListener('load', ajusterContactBloc);
+          window.addEventListener('resize', ajusterContactBloc);
+
+            function openModal() {
+  const modal = document.getElementById("contact-modal");
+  modal.classList.add("show");
+}
+
+function closeModal() {
+  const modal = document.getElementById("contact-modal");
+  modal.classList.remove("show");
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("contact-modal");
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
+        </script>
+        </body> 
+        
+</html>
